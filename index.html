@@ -1,1 +1,51 @@
-
+<head>
+    <!-- A-Frameを読み込む -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+    <!-- AR.jsを読み込む -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ar.js/2.2.2/aframe-ar.min.js"></script>
+    <!-- aframe-extras読み込み -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+          <!-- glbのアニメーションを動かす機能「animation-mixer」を働かせるためにaframe-extras読み込みをする -->
+    </head>
+    
+    <body style="margin : 0px; overflow: hidden;">
+      <a-scene embedded arjs>
+                <!-- a-sceneのところへ「embedded arjs」と入れないと、アスペクト比（縦横比）が狂います -->
+    
+        <!-- マーカーが認識されたら -->
+        <!-- <a-marker
+          type="pattern" 
+          preset="custom" 
+          url="/pattern-cake_Qiita3_animation.patt"> -->
+    
+          <!-- 画像を表示します -->
+              <!-- ケーキのアニメーション -->
+          <a-entity
+              gltf-model=”url(./Asset/caeruJump.glb)” 
+              position="0 0 0"
+              rotation="-45 0 0"
+              scale="0.5 0.5 0.5"
+              animation-mixer></a-entity>
+                    <!-- 「animation-mixer」を追記します -->
+    
+              <!-- お祝いしたい方の名前 -->          
+              <!-- <a-entity 
+              gltf-model=”url(/name.glb)” 
+              position="0.7 0.4 -2.2" 
+              rotation="-45 0 0" 
+              scale="0.8 0.8 0.8"
+              animation-mixer>
+              </a-entity> -->
+                    <!-- アニメーションがないファイルも「animation-mixer」を追記します。これがないと表示されません -->
+    
+    
+          <!-- 音楽を流します
+            <audio src="/HappyBirthday.wav" autoplay loop>
+              あなたのブラウザーは <code>audio</code>要素をサポートしていません。
+            </audio>
+        </a-marker> -->
+        <a-entity camera></a-entity>
+      </a-scene>
+    </body>
+    
+    
