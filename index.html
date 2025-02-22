@@ -9,7 +9,8 @@
         <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.2.0/dist/aframe-extras.min.js"></script>
           <!-- glbのアニメーションを動かす機能「animation-mixer」を働かせるためにaframe-extras読み込みをする -->
     </head>
-    <a-scene embedded arjs>
+    <bodystyle="margin: 0; overflow: hidden">
+      <a-scene embedded arjs vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;">
         <a-sky color=#ECECEC></a-sky>
         <!-- <a-plane position="0, 0, -4" width="4" height="4" rotation="-90 0 0"  color=#7BC8A4></a-plane> -->
         <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" height="1" depth="1" width="1" ></a-box>
@@ -23,7 +24,7 @@
               animation-mixer></a-entity>
         <a-entity camera></a-entity>
       </a-scene>
-    
+    </body>
     
 </html>
     
